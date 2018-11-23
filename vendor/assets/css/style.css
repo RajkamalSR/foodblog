@@ -1,0 +1,169 @@
+
+html,body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,label,span,div,section,header,footer,ul,li,a,aside,article,table,th,td{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-top{
+    background: #ff2a6b;
+    overflow: hidden;
+    padding: 18px 0;
+    color: #fff;
+    max-height: 60px;
+}
+
+.header-main{
+    padding:24px 0;
+}
+
+.no-styles{
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.register-links > li, .social-icons > li{
+    display: inline-block;
+}
+
+.social-icons > li{
+    width: 20px;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.social-icons > li:first-child{
+    padding-left:0;
+}
+
+.header-top a{
+    color: #fff;
+}
+
+.bg-1{
+    background: url('../images/slider-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 768px;
+}
+
+.disc{
+    width:100px;
+    height: 100px;
+    background: #ff2a6b;
+}
+
+.intro-wrap{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.intro-image{
+    width: calc(100% - 33.33333333%);
+    float: left;
+}
+.intro-content{
+    background: #ff2a6b;
+    padding: 50px 0 35px;
+    float: left;
+    width: 33.33333%;
+    position: relative
+}
+
+.intro-content:after{
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 209px;
+    background: #ff2a6b;
+    left: -18px;
+    top: -18px;
+    transform: rotate(-20deg);
+}
+
+@keyframes slideOutUp {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  .slideOutUp {
+    -webkit-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+  }
+  
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes loader{
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+  }
+
+  .loader {
+    -webkit-animation-name: loader;
+    animation-name: loader;
+  }
+
+  .loader-disc{
+      width: 48px;
+      height: 48px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+  }
+
+  .loader-disc:after{
+      content: '';
+      position: absolute;
+      border: 7px solid #ff2a6b;
+      border-color: #ff2a6b transparent;
+      content: " ";
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border-radius: 50%;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: loader;
+      animation-name: loader;
+  }
